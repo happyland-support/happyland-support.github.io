@@ -1,0 +1,157 @@
+
+/* 共通
+----------------------------- */
+:root {
+  --my-hue: 0;
+}
+body {
+  font-size: 16px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+/* スマホ画像は450px＋ＰC画像は600px */
+img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+ul li {
+  margin-bottom: 8px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* レイアウト
+----------------------------- */
+.wrapper {
+  padding: 0 4%;
+}
+/* ヘッダー
+----------------------------- */
+header {
+  background-image: url(../img/header.png);
+  text-align: center;
+}
+header h1 {
+  padding-top: 48px;
+  font-size: 38px;
+  font-weight: bold;
+}
+header p {
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+header a {
+  display: block;
+}
+/* メイン
+----------------------------- */
+.cat {
+  padding: 15px 0;
+}
+.cat:last-child {
+  margin-bottom: 40px;
+}
+.cat h2 {
+  font-weight: bold;
+  border-left: 6px solid hsl(var(--my-hue), 80%, 70%);
+  border-bottom: 1px solid #999;
+  padding: 6px;
+}
+.cat p {
+  padding: 8px 0 12px;
+}
+.caution {
+  color: rgb(235, 48, 48);
+  font-size: 14px;
+  padding: 0;
+}
+.btn {
+  width: 40%;
+  max-width: 250px;
+  height: 35px;
+  margin: 0 auto;
+  background: hsl(var(--my-hue), 80%, 70%);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 #999;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn a {
+  font-size: 14px;
+  color: #fff;
+  padding: 6px 0 10px;
+  display: block;
+}
+.index {
+  border: 1px solid hsl(var(--my-hue), 80%, 70%);
+  margin: 10px 0;
+}
+.index h3 {
+  text-align: center;
+  background: hsl(var(--my-hue), 80%, 70%);
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 0;
+}
+.index ul {
+  padding: 10px;
+  list-style: circle inside;
+}
+.index ul li:hover {
+  opacity: 0.8;
+}
+.content {
+  margin-bottom: 60px;
+}
+.flow {
+  margin: 30px auto;
+}
+.content h1 {
+  font-weight: bold;
+  border-left: 6px solid hsl(var(--my-hue), 80%, 70%);
+  border-bottom: 1px solid #999;
+  padding: 6px;
+  margin-bottom: 16px;
+}
+.content h2 {
+  border-left: 5px solid hsl(calc(var(--my-hue) + 40), 80%, 60%);
+  padding: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+#link {
+  display: inline-block;
+  font-weight: bold;
+  color: hsl(calc(var(--my-hue) + 220), 80%, 50%);
+}
+#link:hover {
+  text-decoration: underline;
+}
+/* フッター
+----------------------------- */
+footer {
+  background: #333;
+  text-align: center;
+  padding: 25px 0;
+}
+footer p a {
+  color: #fff;
+  font-size: 14px;
+}
+/* @media
+----------------------------- */
+@media (min-width: 800px) {
+  .wrapper {
+    width: 700px;
+    margin: 0 auto;
+  }
+  .btn {
+    margin: 0 0 0 auto;
+  }
+}
