@@ -50,7 +50,7 @@ header h1 {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(187, 187, 187, 0.95);
+  background: rgba(231, 231, 231, 0.95);
   text-align: center;
   padding: 64px;
   opacity: 0;
@@ -68,50 +68,38 @@ header h1 {
   font-size: 48px;
   cursor: pointer;
 }
+.overlay ul {
+  text-align: left;
+}
 .overlay li {
-  font-size: 16px;
+  font-size: 15px;
+  padding: 8px;
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.6s, transform 0.6s;
 }
 .overlay.show li {
   opacity: 1;
   transform: none;
 }
 .overlay.show li:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.overlay.show li:nth-child(2) {
   transition-delay: 0.1s;
 }
-.overlay.show li:nth-child(3) {
-  transition-delay: 0.15s;
-}
-.overlay.show li:nth-child(4) {
+.overlay.show li:nth-child(2) {
   transition-delay: 0.2s;
 }
-.overlay.show li:nth-child(5) {
-  transition-delay: 0.25s;
-}
-.overlay.show li:nth-child(6) {
+.overlay.show li:nth-child(3) {
   transition-delay: 0.3s;
 }
-/* header {
-  background-image: url(../img/header.png);
-  text-align: center;
+.overlay.show li:nth-child(4) {
+  transition-delay: 0.4s;
 }
-header h1 {
-  padding-top: 48px;
-  font-size: 38px;
-  font-weight: bold;
+.overlay.show li:nth-child(5) {
+  transition-delay: 0.5s;
 }
-header p {
-  font-size: 14px;
-  padding-bottom: 15px;
+.overlay.show li:nth-child(6) {
+  transition-delay: 0.6s;
 }
-header a {
-  display: block;
-} */
 /* メイン
 ----------------------------- */
 .start {
@@ -238,5 +226,8 @@ footer p a {
   .pc-menu {
     display: block;
     margin-left: auto;
+  }
+  .overlay ul {
+    text-align: center;
   }
 }
