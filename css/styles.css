@@ -27,6 +27,76 @@ a {
 /* ヘッダー
 ----------------------------- */
 header {
+  display: flex;
+}
+header h1 {
+  font-size: 30px;
+  line-height: 60px;
+}
+.sp-menu {
+  margin-left: auto;
+}
+.sp-menu #open {
+  font-size: 48px;
+  line-height: 60px;
+  cursor: pointer;
+}
+.sp-menu #open.hide {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(187, 187, 187, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 48px;
+  cursor: pointer;
+}
+.overlay li {
+  font-size: 16px;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+.overlay.show li:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.overlay.show li:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.overlay.show li:nth-child(6) {
+  transition-delay: 0.3s;
+}
+/* header {
   background-image: url(../img/header.png);
   text-align: center;
 }
@@ -41,7 +111,7 @@ header p {
 }
 header a {
   display: block;
-}
+} */
 /* メイン
 ----------------------------- */
 .start {
@@ -164,5 +234,9 @@ footer p a {
   }
   .btn {
     margin: 0 0 0 auto;
+  }
+  .pc-menu {
+    display: block;
+    margin-left: auto;
   }
 }
