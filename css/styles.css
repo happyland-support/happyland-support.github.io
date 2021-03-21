@@ -76,7 +76,7 @@ header h1 {
   padding: 8px;
   opacity: 0;
   transform: translateX(50px);
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.35s, transform 0.35s;
 }
 .overlay.show li {
   opacity: 1;
@@ -99,6 +99,9 @@ header h1 {
 }
 .overlay.show li:nth-child(6) {
   transition-delay: 0.3s;
+}
+.overlay.show li:nth-child(7) {
+  transition-delay: 0.35s;
 }
 /* メイン
 ----------------------------- */
