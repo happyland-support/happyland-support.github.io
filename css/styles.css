@@ -1,66 +1,100 @@
 
-/* 共通
------------------------------ */
+/* common */
+
 body {
   font-size: 16px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #333;
   line-height: 1.7;
 }
+
 /* スマホ画像は450px＋ＰC画像は600px */
 img {
   max-width: 100%;
   border: 1px solid #ccc;
 }
+
 ul li {
   margin-bottom: 8px;
 }
+
 a {
   text-decoration: none;
   color: #333;
 }
-/* レイアウト
------------------------------ */
+
+/* レイアウト */
+
 .wrapper {
   padding: 0 4%;
 }
-/* ヘッダー
------------------------------ */
+
+/* header */
+
 header {
   display: flex;
+  margin-bottom: 42px;
 }
+
 header h1 {
-  font-size: 30px;
-  line-height: 60px;
+  font-size: 32px;
 }
+
+header img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* menu */
+
 .sp-menu {
   margin-left: auto;
 }
+
 .sp-menu #open {
   font-size: 48px;
-  line-height: 60px;
   cursor: pointer;
 }
+
 .sp-menu #open.hide {
   display: none;
 }
+
 .overlay {
+  z-index: 2;
   position: fixed;
   top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(231, 231, 231, 0.95);
-  text-align: center;
-  padding: 64px;
-  opacity: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  background: #fafafa;
+  transition: all 0.6s;
   pointer-events: none;
-  transition: opacity 0.6s;
 }
+
+.overlay ul {
+  margin-top: 64px;
+}
+
+.overlay li {
+  font-size: 15px;
+  border-bottom: 1px solid #aaa;
+}
+
+.overlay ul li a {
+  display: block;
+  padding: 16px;
+}
+
+.overlay ul li a:hover {
+  opacity: .6;
+}
+
 .overlay.show {
-  opacity: 1;
+  right: 0;
   pointer-events: auto;
 }
+
 .overlay #close {
   position: absolute;
   top: 16px;
@@ -68,47 +102,30 @@ header h1 {
   font-size: 48px;
   cursor: pointer;
 }
-.overlay ul {
-  text-align: left;
+
+/* mask */
+
+.mask {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
-.overlay li {
-  font-size: 15px;
-  padding: 8px;
-  opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.35s, transform 0.35s;
+
+.mask.disable {
+  display: none;
 }
-.overlay.show li {
-  opacity: 1;
-  transform: none;
-}
-.overlay.show li:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.overlay.show li:nth-child(2) {
-  transition-delay: 0.1s;
-}
-.overlay.show li:nth-child(3) {
-  transition-delay: 0.15s;
-}
-.overlay.show li:nth-child(4) {
-  transition-delay: 0.2s;
-}
-.overlay.show li:nth-child(5) {
-  transition-delay: 0.25s;
-}
-.overlay.show li:nth-child(6) {
-  transition-delay: 0.3s;
-}
-.overlay.show li:nth-child(7) {
-  transition-delay: 0.35s;
-}
-/* メイン
------------------------------ */
+
+/* main */
+
 .start {
   border: 1px solid hsl(209, 80%, 70%);
   margin: 10px 0;
 }
+
 .start h1 {
   text-align: center;
   background: hsl(209, 80%, 70%);
@@ -116,29 +133,36 @@ header h1 {
   font-weight: bold;
   padding: 4px 0;
 }
+
 .start p {
   padding: 20px;
 }
+
 .cat {
   padding: 15px 0;
 }
+
 .cat:last-child {
   margin-bottom: 40px;
 }
+
 .cat h2 {
   font-weight: bold;
   border-left: 6px solid hsl(0, 80%, 70%);
   border-bottom: 1px solid #999;
   padding: 6px;
 }
+
 .cat p {
   padding: 8px 0 12px;
 }
+
 .caution {
   color: rgb(235, 48, 48);
   font-size: 14px;
   padding: 0;
 }
+
 .btn {
   width: 40%;
   max-width: 250px;
@@ -152,19 +176,23 @@ header h1 {
   cursor: pointer;
   user-select: none;
 }
+
 .btn:hover {
   opacity: 0.9;
 }
+
 .btn a {
   font-size: 14px;
   color: #fff;
   /* padding: 6px 0 10px; */
   display: block;
 }
+
 .index {
   border: 1px solid hsl(0, 80%, 70%);
   margin: 10px 0;
 }
+
 .index h3 {
   text-align: center;
   background: hsl(0, 80%, 70%);
@@ -172,19 +200,24 @@ header h1 {
   font-weight: bold;
   padding: 4px 0;
 }
+
 .index ul {
   padding: 10px;
   list-style: circle inside;
 }
+
 .index ul li:hover {
   opacity: 0.8;
 }
+
 .content {
   margin-bottom: 60px;
 }
+
 .flow {
   margin: 30px auto;
 }
+
 .content h1 {
   font-weight: bold;
   border-left: 6px solid hsl(0, 80%, 70%);
@@ -192,20 +225,24 @@ header h1 {
   padding: 6px;
   margin-bottom: 16px;
 }
+
 .content h2 {
   border-left: 5px solid hsl(calc(0 + 40), 80%, 60%);
   padding: 4px;
   margin-bottom: 15px;
   font-weight: bold;
 }
+
 #link {
   display: inline-block;
   font-weight: bold;
   color: hsl(calc(0 + 220), 80%, 50%);
 }
+
 #link:hover {
   text-decoration: underline;
 }
+
 .top_btn {
   width: 40%;
   max-width: 250px;
@@ -219,41 +256,49 @@ header h1 {
   cursor: pointer;
   user-select: none;
 }
+
 .top_btn:hover {
   opacity: 0.9;
 }
+
 .top_btn a {
   font-size: 18px;
   font-weight: bold;
   color: hsl(209, 80%, 70%);;
   display: block;
 }
-/* フッター
------------------------------ */
+
+/* footer */
+
 footer {
   background: #333;
   text-align: center;
   padding: 25px 0;
 }
+
 footer p a {
   color: #fff;
   font-size: 14px;
 }
-/* @media
------------------------------ */
+
+/* large Screen */
 @media (min-width: 800px) {
   .wrapper {
     width: 700px;
     margin: 0 auto;
   }
+
   .btn {
     margin: 0 0 0 auto;
   }
+
   .pc-menu {
     display: block;
     margin-left: auto;
   }
+
   .overlay ul {
     text-align: center;
   }
+
 }

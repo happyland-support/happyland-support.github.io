@@ -1,17 +1,36 @@
 'use strict';
 {
-  const open = document.getElementById('open');
-  const overlay = document.querySelector('.overlay')
-  const close = document.getElementById('close');
 
-  open.addEventListener('click', () => {
-    overlay.classList.add('show');
-    open.classList.add('hide');
-  });
+  class Menu {
+    constructor() {
+      this.open = document.getElementById('open');
+      this.overlay = document.querySelector('.overlay')
+      this.close = document.getElementById('close');
+      this.mask = document.querySelector('.mask');
+    }
+    addListeners() {
+      this.open.addEventListener('click', () => {
+        this.overlay.classList.add('show');
+        this.open.classList.add('hide');
+        this.mask.classList.remove('disable');
+      });
+    
+      this.close.addEventListener('click', () => {
+        this.overlay.classList.remove('show');
+        this.open.classList.remove('hide');
+        this.mask.classList.add('disable');
+      });
+    
+      this.mask.addEventListener('click', () => {
+        this.close.click();
+      });
+    }
+  }
 
-  close.addEventListener('click', () => {
-    overlay.classList.remove('show');
-    open.classList.remove('hide');
-  })
+  const menu = new Menu();
+  menu.addListeners();
+
+
+
 
 }
