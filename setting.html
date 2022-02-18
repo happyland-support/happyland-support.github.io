@@ -5,24 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>グーグルクロームのインストール | ハッピーランド</title>
   <meta name="description" content="中高年のための婚活サイト、ハッピーランドの会員様専用サポートページです。">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<main class="wrapper">
 
-  <header>
-    <a href="index.html">
-      <h1><img src="img/logo.png" alt="ハッピーランドロゴ"></h1>
-    </a>
-    <div class="sp-menu">
-      <span class="material-icons" id="open">menu</span>
+<header>
+    <div class="container">
+      <a href="index.html">
+        <h1><img src="img/logo.png" alt="ハッピーランドロゴ"></h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="tel:0120-974-604">
+              <i class="bi bi-telephone"></i>
+              電話
+            </a>
+          </li>
+          <li>
+            <a id="open">
+              <i class="bi bi-list"></i>
+              メニュー
+            </a>
+          </li>
+        </ul>      
+      </nav>
     </div>
-  </header>
+</header>
 
-  <div class="overlay">
-    <span class="material-icons" id="close">close</span>
+<div class="overlay">
+    <i class="bi bi-x-circle" id="close"></i>
     <nav>
       <ul>
         <li><a href="index.html">トップページ</a></li>
@@ -34,93 +47,99 @@
         <li><a href="cash.html">ブラウザのキャッシュクリア</a></li>
       </ul>
     </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div id="target"></div>
+
+<main>
+  <div class="container">
+    <section class="cat">
+      <h2>規定のブラウザを設定する</h2>
+      <p>
+        どういう意味かというと、常にこのブラウザを利用するという意味です。「iPhone」の方は何も設定していない場合、標準で「Safari」が規定のブラウザになっているので問題ないと思います。「Android」の方、および「パソコン」の方はこちらの設定をすることで、ハッピーランドが不自由なくご利用になれます。
+      </p>
+      <div class="index">
+        <h3>目次</h3>
+        <ul>
+          <li><a href="#smartphone_browser">スマホをご利用の方</a></li>
+          <li><a href="#pc_browser">パソコンをご利用の方</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="content">
+      <h1 id="smartphone_browser">スマホをご利用の方</h1>
+      <p>
+        上記でもお伝えしている通り、「iPhone」の方は何も設定していない場合、標準で「Safari」が規定のブラウザになっているので読み飛ばしてください。「Android」の方は設定の見直しのためにも一度目を通してください。
+      </p>
+      <div class="flow">
+        <h2>手順１ ホーム画面の「設定」ボタンをタップします。</h2>
+        <img src="img/browser03.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 「アプリ」を選択します。</h2>
+        <img src="img/browser04.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 「Chrome」を選択します。</h2>
+        <img src="img/browser05.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ 「ブラウザアプリ」を選択します。</h2>
+        <img src="img/browser06.png">
+      </div>
+      <div class="flow">
+        <h2>手順５ 再び「ブラウザアプリ」を選択します。</h2>
+        <img src="img/browser07.png">
+      </div>
+      <div class="flow">
+        <h2>手順６ 「Chrome」を選択します。</h2>
+        <img src="img/browser08.png">
+      </div>
+      <div class="flow">
+        <h2>手順７ 「ブラウザアプリ」が「Chrome」に変わったら規定のブラウザの設定は完了です。</h2>
+        <img src="img/browser09.png">
+      </div>
+    </section>
+    
+    <section class="content">
+      <h1 id="pc_browser">パソコンをご利用の方</h1>
+      <div class="flow">
+        <h2>手順１ 左下にある「ウィンドウズマーク」をクリックします。</h2>
+        <img src="img/browser12.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 歯車のマークの「設定」をクリックします。</h2>
+        <img src="img/browser13.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 「アプリ」を選択します。</h2>
+        <img src="img/browser14.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ 左のメニューの「規定のアプリ」を選択します。</h2>
+        <img src="img/browser15.png">
+      </div>
+      <div class="flow">
+        <h2>手順５ Web ブラウザーで「Google Chrome」を選択します（初期設定は Microsoft Edge です）</h2>
+        <img src="img/browser16.png">
+      </div>
+      <div class="flow">
+        <h2>手順６ 表示が以下のようになったら設定完了です。</h2>
+        <img src="img/browser17.png">
+      </div>
+    </section>
   </div>
-
-  <div class="mask disable"></div>
-
-  <section class="cat">
-    <h2>規定のブラウザを設定する</h2>
-    <p>
-      どういう意味かというと、常にこのブラウザを利用するという意味です。「iPhone」の方は何も設定していない場合、標準で「Safari」が規定のブラウザになっているので問題ないと思います。「Android」の方、および「パソコン」の方はこちらの設定をすることで、ハッピーランドが不自由なくご利用になれます。
-    </p>
-    <div class="index">
-      <h3>目次</h3>
-      <ul>
-        <li><a href="#smartphone_browser">スマホをご利用の方</a></li>
-        <li><a href="#pc_browser">パソコンをご利用の方</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="smartphone_browser">スマホをご利用の方</h1>
-    <p>
-      上記でもお伝えしている通り、「iPhone」の方は何も設定していない場合、標準で「Safari」が規定のブラウザになっているので読み飛ばしてください。「Android」の方は設定の見直しのためにも一度目を通してください。
-    </p>
-    <div class="flow">
-      <h2>手順１ ホーム画面の「設定」ボタンをタップします。</h2>
-      <img src="img/browser03.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 「アプリ」を選択します。</h2>
-      <img src="img/browser04.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 「Chrome」を選択します。</h2>
-      <img src="img/browser05.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ 「ブラウザアプリ」を選択します。</h2>
-      <img src="img/browser06.png">
-    </div>
-    <div class="flow">
-      <h2>手順５ 再び「ブラウザアプリ」を選択します。</h2>
-      <img src="img/browser07.png">
-    </div>
-    <div class="flow">
-      <h2>手順６ 「Chrome」を選択します。</h2>
-      <img src="img/browser08.png">
-    </div>
-    <div class="flow">
-      <h2>手順７ 「ブラウザアプリ」が「Chrome」に変わったら規定のブラウザの設定は完了です。</h2>
-      <img src="img/browser09.png">
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="pc_browser">パソコンをご利用の方</h1>
-    <div class="flow">
-      <h2>手順１ 左下にある「ウィンドウズマーク」をクリックします。</h2>
-      <img src="img/browser12.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 歯車のマークの「設定」をクリックします。</h2>
-      <img src="img/browser13.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 「アプリ」を選択します。</h2>
-      <img src="img/browser14.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ 左のメニューの「規定のアプリ」を選択します。</h2>
-      <img src="img/browser15.png">
-    </div>
-    <div class="flow">
-      <h2>手順５ Web ブラウザーで「Google Chrome」を選択します（初期設定は Microsoft Edge です）</h2>
-      <img src="img/browser16.png">
-    </div>
-    <div class="flow">
-      <h2>手順６ 表示が以下のようになったら設定完了です。</h2>
-      <img src="img/browser17.png">
-    </div>
-  </section>
-
-  <div class="top_btn"><a href="index.html">トップへ戻る</a></div>
-
 </main>
+
 <footer>
   <p><a href="#"><small>&copy; 2021 happyland</small></a></p>
 </footer>
+
+<a href="#" id="to_top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
 <script src="js/main.js"></script>
 </body>
 </html>

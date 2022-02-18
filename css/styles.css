@@ -2,42 +2,94 @@
 /* common */
 
 body {
-  font-size: 16px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2,
+h3 {
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
 }
 
 /* スマホ画像は450px＋ＰC画像は600px */
 img {
   max-width: 100%;
   border: 1px solid #ccc;
+  vertical-align: bottom;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 ul li {
   margin-bottom: 8px;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: #333;
+  color: inherit;
 }
 
-/* レイアウト */
-
-.wrapper {
+main {
   padding: 0 4%;
+  margin-top: 90px;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#to_top.scrolled {
+  opacity: 1;
+}
+
+#to_top i {
+  font-size: 32px;
+  color: hsl(200, 70%, 50%);
 }
 
 /* header */
 
 header {
-  display: flex;
-  margin-bottom: 24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-header h1 {
-  font-size: 32px;
+header .container {
+  padding: 12px 4%;
+  background-color: rgba(255, 255, 255, .95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+header.scrolled {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
 }
 
 header img {
@@ -45,19 +97,34 @@ header img {
   vertical-align: middle;
 }
 
-/* menu */
-
-.sp-menu {
-  margin-left: auto;
-}
-
-.sp-menu #open {
-  font-size: 48px;
+header nav {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.sp-menu #open.hide {
-  display: none;
+header nav ul {
+  display: flex;
+}
+
+header li + li {
+  margin-left: 16px;
+}
+
+header nav ul li a {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: hsl(200, 70%, 50%);
+  text-align: center;
+}
+
+header nav ul li a:hover {
+  opacity: .6;
+}
+
+header nav ul li a i {
+  font-size: 22px;
 }
 
 .overlay {
@@ -99,7 +166,7 @@ header img {
   position: absolute;
   top: 16px;
   right: 16px;
-  font-size: 48px;
+  font-size: 32px;
   cursor: pointer;
 }
 
@@ -119,31 +186,32 @@ header img {
   display: none;
 }
 
-/* main */
+/* start */
 
 .start {
-  border: 1px solid hsl(209, 80%, 70%);
   margin: 10px 0;
 }
 
 .start h1 {
   text-align: center;
   background: hsl(209, 80%, 70%);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   color: #fff;
   font-weight: bold;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 .start p {
   padding: 20px;
+  border: 1px solid hsl(209, 80%, 70%);  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
+
+/* cat */
 
 .cat {
   padding: 15px 0;
-}
-
-.cat:last-child {
-  margin-bottom: 40px;
 }
 
 .cat h2 {
@@ -171,7 +239,7 @@ header img {
   margin: 0 auto;
   background: hsl(0, 80%, 70%);
   border-radius: 4px;
-  box-shadow: 0 1px 0 #999;
+  box-shadow: 0 1px 0 hsl(0, 39%, 55%);
   text-align: center;
   cursor: pointer;
   user-select: none;
@@ -219,16 +287,17 @@ header img {
 }
 
 .content h1 {
+  font-size: 16px;
   font-weight: bold;
-  border-left: 6px solid hsl(0, 80%, 70%);
-  border-bottom: 1px solid #999;
+  background: hsl(0, 80%, 70%);
+  color: #fff;
   padding: 6px;
   margin-bottom: 16px;
 }
 
 .content h2 {
   border-left: 5px solid hsl(calc(0 + 40), 80%, 60%);
-  padding: 4px;
+  padding: 4px 4px 4px 8px;
   margin-bottom: 15px;
   font-weight: bold;
 }
@@ -241,31 +310,6 @@ header img {
 
 #link:hover {
   text-decoration: underline;
-}
-
-.top_btn {
-  width: 40%;
-  max-width: 250px;
-  height: 50px;
-  line-height: 50px;
-  margin: 30px auto;
-  border-radius: 4px;
-  border: 2px solid hsl(209, 80%, 70%);
-  box-shadow: 0 1px 0 hsl(209, 80%, 70%);
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-
-.top_btn:hover {
-  opacity: 0.9;
-}
-
-.top_btn a {
-  font-size: 18px;
-  font-weight: bold;
-  color: hsl(209, 80%, 70%);;
-  display: block;
 }
 
 /* footer */
@@ -283,18 +327,9 @@ footer p a {
 
 /* large Screen */
 @media (min-width: 800px) {
-  .wrapper {
+  .container {
     width: 700px;
     margin: 0 auto;
-  }
-
-  .btn {
-    margin: 0 0 0 auto;
-  }
-
-  .pc-menu {
-    display: block;
-    margin-left: auto;
   }
 
   .overlay ul {

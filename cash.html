@@ -5,24 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>グーグルクロームのインストール | ハッピーランド</title>
   <meta name="description" content="中高年のための婚活サイト、ハッピーランドの会員様専用サポートページです。">
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<main class="wrapper">
 
-  <header>
-    <a href="index.html">
-      <h1><img src="img/logo.png" alt="ハッピーランドロゴ"></h1>
-    </a>
-    <div class="sp-menu">
-      <span class="material-icons" id="open">menu</span>
+<header>
+    <div class="container">
+      <a href="index.html">
+        <h1><img src="img/logo.png" alt="ハッピーランドロゴ"></h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="tel:0120-974-604">
+              <i class="bi bi-telephone"></i>
+              電話
+            </a>
+          </li>
+          <li>
+            <a id="open">
+              <i class="bi bi-list"></i>
+              メニュー
+            </a>
+          </li>
+        </ul>      
+      </nav>
     </div>
-  </header>
+</header>
 
-  <div class="overlay">
-    <span class="material-icons" id="close">close</span>
+<div class="overlay">
+    <i class="bi bi-x-circle" id="close"></i>
     <nav>
       <ul>
         <li><a href="index.html">トップページ</a></li>
@@ -34,156 +47,162 @@
         <li><a href="cash.html">ブラウザのキャッシュクリア</a></li>
       </ul>
     </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div id="target"></div>
+
+<main>
+  <div class="container">
+    <section class="cat">
+      <h2>ブラウザのキャッシュクリアについて</h2>
+      <p>
+        まずはそのページを再読み込みしてみてください。再読み込みとはページ上部にある矢印がクルっと回っているボタンをクリックすることです。クリックしてもなお、サイトのレイアウトが崩れていたり、表示がおかしいと思ったら、キャッシュのクリアをすると元に戻ることがあります。<br>
+        <span class="caution">※なお、キャッシュをクリアすると、自動ログインが一時的に解除されることがありますので、お客様ページにログインする際は、再度「会員ID」と「パスワード」を入力する必要があります。</span>
+      </p>
+      <div class="index">
+        <h3>目次</h3>
+        <ul>
+          <li><a href="#chrome">スマホ　Android(Google Chrome)の方</a></li>
+          <li><a href="#android">スマホ　Android(標準ブラウザ)の方</a></li>
+          <li><a href="#iphone">スマホ　iPhone(Safari)の方</a></li>
+          <li><a href="#pc_chrome">PC　Google Chromeの方</a></li>
+          <li><a href="#pc_explorer">PC　Internet Explorerの方</a></li>
+          <li><a href="#pc_firefox">PC　Firefoxの方</a></li>
+        </ul>
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="chrome">スマホ　Android(Google Chrome)の方</h1>
+      <div class="flow">
+        <h2>手順１ Google Chromeを開き、画面の右上にあるメニューボタンをタップし、メニューの中から設定を選択します。</h2>
+        <img src="img/cash01.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 開いた画面を下にスクロールし、「プライバシー」をタップします。</h2>
+        <img src="img/cash02.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 開いたページを下にスクロールし、「閲覧履歴のデータを消去する」をタップします。</h2>
+        <img src="img/cash03.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ データを削除する期間を選択し、「閲覧履歴、キャッシュされた画像とファイル」にチェックを入れ、「データを消去」をタップします。</h2>
+        <img src="img/cash04.png">
+        <p><span class="caution">※それでも改善しない場合、「Gookieとサイトデータ」を選択し、こちらも削除してみてください。</span></p>
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="android">スマホ　Android(標準ブラウザ)の方</h1>
+      <p>
+        ハッピーランドを利用する上で、地球儀のマークの標準ブラウザはオススメしません。出来ればGoogle Chromeを利用して頂きたいですが、どうしてもという場合にこちらをご覧ください。
+      </p>
+      <div class="flow">
+        <h2>手順１ 地球儀のブラウザを開き、「メニュー」ボタンをタップし、現れたメニューの中から設定をタップします。</h2>
+        <img src="img/cash05.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 「プライバシーとセキュリティ」をタップします。</h2>
+        <img src="img/cash06.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 「キャッシュを削除、履歴削除」を選択し、データの削除をします。</h2>
+        <img src="img/cash07.png">
+        <p><span class="caution">それでも改善しない場合、「cookieをすべて削除、フォームデータを削除」を選択して削除してみてください。</span></p>
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="iphone">スマホ　iPhone(Safari)の方</h1>
+      <p>
+        標準ブラウザがsafariですので、safariの設定の仕方を解説しますが、Google Chromeをお使いの方は上記のAndroid(Google Chrome)の方をご覧ください。
+      </p>
+      <div class="flow">
+        <h2>手順１ ホーム画面より「設定アプリ」をタップします。</h2>
+        <img src="img/cash08.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 開いた画面を下にスクロールし、「safari」をタップします。</h2>
+        <img src="img/cash09.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ ヘージの下部にある「履歴とWebサイトデータを消去」をタップすると削除完了です。</h2>
+        <img src="img/cash10.png">
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="pc_chrome">PC　Google Chromeの方</h1>
+      <div class="flow">
+        <h2>手順１ Google Chromeを開き、右上の「Google Chromeの設定」をクリックします。</h2>
+        <img src="img/cash11.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 開いたメニューから「その他のツール」→「閲覧履歴を消去」と選択します。</h2>
+        <img src="img/cash12.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 期間を選択します。すべて削除するには「全期間」を選択してください。</h2>
+        <img src="img/cash13.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ 「Cookieと他のサイトデータ」と「キャッシュされた画像とファイル」をチェックして、「データを削除」をクリックすると削除完了です。</h2>
+        <img src="img/cash14.png">
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="pc_explorer">PC　Internet Explorerの方</h1>
+      <div class="flow">
+        <h2>手順１ Internet Explorerを開き、右上の設定アイコンをクリックします。</h2>
+        <img src="img/cash15.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 「インターネットオプション」を選択してください。</h2>
+        <img src="img/cash16.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 「閲覧の履歴」から「削除」ボタンをクリックします。</h2>
+        <img src="img/cash17.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ 「インターネット一時ファイルおよびWebサイトのファイル」をチェックし、「削除」ボタンをクリックすると削除完了です。</h2>
+        <img src="img/cash18.png">
+      </div>
+    </section>
+  
+    <section class="content">
+      <h1 id="pc_firefox">PC　Firefoxの方</h1>
+      <div class="flow">
+        <h2>手順１ Fire Foxを開き、右上のメニューアイコンから「オプション」を選択します。</h2>
+        <img src="img/cash19.png">
+      </div>
+      <div class="flow">
+        <h2>手順２ 左のメニューの「プライバシーとセキュリティ」を選択します。</h2>
+        <img src="img/cash20.png">
+      </div>
+      <div class="flow">
+        <h2>手順３ 「Cookieとサイトデータ」より「データを消去」をクリックします。</h2>
+        <img src="img/cash21.png">
+      </div>
+      <div class="flow">
+        <h2>手順４ 「ウェブコンテンツのキャッシュ」にチェックを入れて「消去」をクリックすると削除完了です。</h2>
+        <img src="img/cash22.png">
+        <p><span class="caution">※それでも改善しない場合、「cookieとサイトデータ」を選択して削除してみてください。</span></p>
+      </div>
+    </section>
   </div>
-
-  <div class="mask disable"></div>
-
-  <section class="cat">
-    <h2>ブラウザのキャッシュクリアについて</h2>
-    <p>
-      まずはそのページを再読み込みしてみてください。再読み込みとはページ上部にある矢印がクルっと回っているボタンをクリックすることです。クリックしてもなお、サイトのレイアウトが崩れていたり、表示がおかしいと思ったら、キャッシュのクリアをすると元に戻ることがあります。<br>
-      <span class="caution">※なお、キャッシュをクリアすると、自動ログインが一時的に解除されることがありますので、お客様ページにログインする際は、再度「会員ID」と「パスワード」を入力する必要があります。</span>
-    </p>
-    <div class="index">
-      <h3>目次</h3>
-      <ul>
-        <li><a href="#chrome">スマホ　Android(Google Chrome)の方</a></li>
-        <li><a href="#android">スマホ　Android(標準ブラウザ)の方</a></li>
-        <li><a href="#iphone">スマホ　iPhone(Safari)の方</a></li>
-        <li><a href="#pc_chrome">PC　Google Chromeの方</a></li>
-        <li><a href="#pc_explorer">PC　Internet Explorerの方</a></li>
-        <li><a href="#pc_firefox">PC　Firefoxの方</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="chrome">スマホ　Android(Google Chrome)の方</h1>
-    <div class="flow">
-      <h2>手順１ Google Chromeを開き、画面の右上にあるメニューボタンをタップし、メニューの中から設定を選択します。</h2>
-      <img src="img/cash01.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 開いた画面を下にスクロールし、「プライバシー」をタップします。</h2>
-      <img src="img/cash02.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 開いたページを下にスクロールし、「閲覧履歴のデータを消去する」をタップします。</h2>
-      <img src="img/cash03.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ データを削除する期間を選択し、「閲覧履歴、キャッシュされた画像とファイル」にチェックを入れ、「データを消去」をタップします。</h2>
-      <img src="img/cash04.png">
-      <p><span class="caution">※それでも改善しない場合、「Gookieとサイトデータ」を選択し、こちらも削除してみてください。</span></p>
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="android">スマホ　Android(標準ブラウザ)の方</h1>
-    <p>
-      ハッピーランドを利用する上で、地球儀のマークの標準ブラウザはオススメしません。出来ればGoogle Chromeを利用して頂きたいですが、どうしてもという場合にこちらをご覧ください。
-    </p>
-    <div class="flow">
-      <h2>手順１ 地球儀のブラウザを開き、「メニュー」ボタンをタップし、現れたメニューの中から設定をタップします。</h2>
-      <img src="img/cash05.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 「プライバシーとセキュリティ」をタップします。</h2>
-      <img src="img/cash06.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 「キャッシュを削除、履歴削除」を選択し、データの削除をします。</h2>
-      <img src="img/cash07.png">
-      <p><span class="caution">それでも改善しない場合、「cookieをすべて削除、フォームデータを削除」を選択して削除してみてください。</span></p>
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="iphone">スマホ　iPhone(Safari)の方</h1>
-    <p>
-      標準ブラウザがsafariですので、safariの設定の仕方を解説しますが、Google Chromeをお使いの方は上記のAndroid(Google Chrome)の方をご覧ください。
-    </p>
-    <div class="flow">
-      <h2>手順１ ホーム画面より「設定アプリ」をタップします。</h2>
-      <img src="img/cash08.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 開いた画面を下にスクロールし、「safari」をタップします。</h2>
-      <img src="img/cash09.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ ヘージの下部にある「履歴とWebサイトデータを消去」をタップすると削除完了です。</h2>
-      <img src="img/cash10.png">
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="pc_chrome">PC　Google Chromeの方</h1>
-    <div class="flow">
-      <h2>手順１ Google Chromeを開き、右上の「Google Chromeの設定」をクリックします。</h2>
-      <img src="img/cash11.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 開いたメニューから「その他のツール」→「閲覧履歴を消去」と選択します。</h2>
-      <img src="img/cash12.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 期間を選択します。すべて削除するには「全期間」を選択してください。</h2>
-      <img src="img/cash13.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ 「Cookieと他のサイトデータ」と「キャッシュされた画像とファイル」をチェックして、「データを削除」をクリックすると削除完了です。</h2>
-      <img src="img/cash14.png">
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="pc_explorer">PC　Internet Explorerの方</h1>
-    <div class="flow">
-      <h2>手順１ Internet Explorerを開き、右上の設定アイコンをクリックします。</h2>
-      <img src="img/cash15.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 「インターネットオプション」を選択してください。</h2>
-      <img src="img/cash16.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 「閲覧の履歴」から「削除」ボタンをクリックします。</h2>
-      <img src="img/cash17.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ 「インターネット一時ファイルおよびWebサイトのファイル」をチェックし、「削除」ボタンをクリックすると削除完了です。</h2>
-      <img src="img/cash18.png">
-    </div>
-  </section>
-
-  <section class="content">
-    <h1 id="pc_firefox">PC　Firefoxの方</h1>
-    <div class="flow">
-      <h2>手順１ Fire Foxを開き、右上のメニューアイコンから「オプション」を選択します。</h2>
-      <img src="img/cash19.png">
-    </div>
-    <div class="flow">
-      <h2>手順２ 左のメニューの「プライバシーとセキュリティ」を選択します。</h2>
-      <img src="img/cash20.png">
-    </div>
-    <div class="flow">
-      <h2>手順３ 「Cookieとサイトデータ」より「データを消去」をクリックします。</h2>
-      <img src="img/cash21.png">
-    </div>
-    <div class="flow">
-      <h2>手順４ 「ウェブコンテンツのキャッシュ」にチェックを入れて「消去」をクリックすると削除完了です。</h2>
-      <img src="img/cash22.png">
-      <p><span class="caution">※それでも改善しない場合、「cookieとサイトデータ」を選択して削除してみてください。</span></p>
-    </div>
-  </section>
-
-  <div class="top_btn"><a href="index.html">トップへ戻る</a></div>
-
 </main>
+
 <footer>
   <p><a href="#"><small>&copy; 2021 happyland</small></a></p>
 </footer>
+
+<a href="#" id="to_top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
 <script src="js/main.js"></script>
 </body>
 </html>
