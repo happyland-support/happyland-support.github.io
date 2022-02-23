@@ -29,7 +29,6 @@ p {
 
 /* スマホ画像は450px＋ＰC画像は600px */
 img {
-  max-width: 100%;
   border: 1px solid #ccc;
   vertical-align: bottom;
 }
@@ -231,6 +230,8 @@ header nav ul li a i {
   padding: 0;
 }
 
+/* btn */
+
 .btn {
   width: 40%;
   max-width: 250px;
@@ -256,6 +257,8 @@ header nav ul li a i {
   display: block;
 }
 
+/* index */
+
 .index {
   border: 1px solid hsl(0, 80%, 70%);
   margin: 10px 0;
@@ -278,12 +281,10 @@ header nav ul li a i {
   opacity: 0.8;
 }
 
+/* content */
+
 .content {
   margin-bottom: 60px;
-}
-
-.flow {
-  margin: 30px auto;
 }
 
 .content h1 {
@@ -301,6 +302,22 @@ header nav ul li a i {
   margin-bottom: 15px;
   font-weight: bold;
 }
+
+.content img {
+  max-width: 100%;
+}
+
+/* flow */
+
+.flow {
+  margin: 30px auto;
+}
+
+.flow img {
+  max-width: 100%;
+}
+
+/* link */
 
 #link {
   display: inline-block;
@@ -326,6 +343,7 @@ footer p a {
 }
 
 /* large Screen */
+
 @media (min-width: 800px) {
   .container {
     width: 700px;
