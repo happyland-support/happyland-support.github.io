@@ -28,6 +28,7 @@ p {
 }
 
 /* スマホ画像は450px＋ＰC画像は600px */
+
 img {
   border: 1px solid #ccc;
   vertical-align: bottom;
@@ -51,7 +52,7 @@ a {
 
 main {
   padding: 0 4%;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 /* to-top */
