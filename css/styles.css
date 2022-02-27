@@ -39,7 +39,6 @@ ul {
 }
 
 ul li {
-  margin-bottom: 8px;
   list-style: none;
 }
 
@@ -48,12 +47,16 @@ a {
   color: inherit;
 }
 
+/* main */
+
 main {
   padding: 0 4%;
   margin-top: 90px;
 }
 
-#to_top {
+/* to-top */
+
+#to-top {
   position: fixed;
   bottom: 16px;
   right: 16px;
@@ -61,13 +64,13 @@ main {
   transition: opacity .3s;
 }
 
-#to_top.scrolled {
+#to-top.scrolled {
   opacity: 1;
 }
 
-#to_top i {
+#to-top i {
   font-size: 32px;
-  color: hsl(200, 70%, 50%);
+  color: #4db4cb;
 }
 
 /* header */
@@ -79,7 +82,7 @@ header {
 }
 
 header .container {
-  padding: 12px 4%;
+  padding: 8px 4%;
   background-color: rgba(255, 255, 255, .95);
   display: flex;
   justify-content: space-between;
@@ -114,7 +117,7 @@ header nav ul li a {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  color: hsl(200, 70%, 50%);
+  color: #4db4cb;
   text-align: center;
 }
 
@@ -133,23 +136,28 @@ header nav ul li a i {
   right: -100%;
   width: 70%;
   height: 100vh;
-  background: #fafafa;
+  background-color: #4db4cb;
   transition: all 0.6s;
   pointer-events: none;
 }
 
-.overlay ul {
-  margin-top: 64px;
+.overlay h1 {
+  padding: 10px 14px;
+  font-size: 16px;
+  background-color: #429baf;
+  color: #fff;
+  border-bottom: 1px solid #3b8b9d;
 }
 
 .overlay li {
   font-size: 15px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #45a2b6;
 }
 
 .overlay ul li a {
   display: block;
-  padding: 16px;
+  padding: 14px;
+  color: #fff;
 }
 
 .overlay ul li a:hover {
@@ -159,14 +167,6 @@ header nav ul li a i {
 .overlay.show {
   right: 0;
   pointer-events: auto;
-}
-
-.overlay #close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 32px;
-  cursor: pointer;
 }
 
 /* mask */
@@ -193,7 +193,7 @@ header nav ul li a i {
 
 .start h1 {
   text-align: center;
-  background: hsl(209, 80%, 70%);
+  background: #4db4cb;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: #fff;
@@ -203,7 +203,8 @@ header nav ul li a i {
 
 .start p {
   padding: 20px;
-  border: 1px solid hsl(209, 80%, 70%);  border-bottom-left-radius: 8px;
+  border: 1px solid #4db4cb;
+  border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
@@ -279,6 +280,10 @@ header nav ul li a i {
 
 .index ul li:hover {
   opacity: 0.8;
+}
+
+.index li + li {
+  margin-top: 8px;
 }
 
 /* content */

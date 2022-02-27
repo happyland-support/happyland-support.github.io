@@ -26,7 +26,7 @@
   }
 
   const header = document.querySelector('header');
-  const toTop = document.getElementById('to_top');
+  const toTop = document.getElementById('to-top');
 
   const inViewObserver = new IntersectionObserver(inViewCallback, {
     threshold: 0.2,
@@ -53,7 +53,6 @@
     constructor() {
       this.open = document.getElementById('open');
       this.overlay = document.querySelector('.overlay')
-      this.close = document.getElementById('close');
       this.mask = document.querySelector('.mask');
     }
     addListeners() {
@@ -61,14 +60,10 @@
         this.overlay.classList.add('show');
         this.mask.classList.remove('disable');
       });
-    
-      this.close.addEventListener('click', () => {
+
+      this.mask.addEventListener('click', () => {
         this.overlay.classList.remove('show');
         this.mask.classList.add('disable');
-      });
-    
-      this.mask.addEventListener('click', () => {
-        this.close.click();
       });
     }
   }
